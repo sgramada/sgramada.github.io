@@ -14,7 +14,7 @@ body {
 
 /* Constrain the width so it doesn't stretch too far on desktop */
 main {
-    max-width: 700px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
 }
