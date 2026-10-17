@@ -3,81 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Engineering Portfolio</title>
+    <title>Sam Gramada | Engineering Portfolio</title>
 
-    <!-- CSS File Links -->
-    <!-- This the the fonts free from google -->
-
-    <!-- Titillium Web -->
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Quicksand -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Mina -->
-    <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Marvel -->
-    <link href="https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
-    <!-- Header Section (Banner & Profile) -->
-
-    <header>
-        <!-- Replace banner.jpg with your own wide image -->
-        <div class="banner" style="background-image: url('banner.jpg');"></div>
-        <div class="profile-section">
-            <!-- Replace profile.jpg with your photo -->
-            <img src="profile.jpg" alt="Your Name" class="profile-pic">
-            <h1>Sam Gramada</h1>
-            <h2>3rd Year Engineering Physics Student - Mechatronics Focus</h2>
-            
-            <div class="links">
-                <a href="www.linkedin.com/in/samgramada">LinkedIn</a>
-                <a href="https://github.com/sgramada">GitHub</a>
-                <a href="resume.pdf" target="_blank">Resume (PDF)</a>
-            </div>
+    <header class="top-header">
+        <h1 class="site-title">Sam Gramada</h1>
+        <h2 class="site-subtitle">Engineering Physics - Mechatronics Focus, UBC<br>Expected Graduation: May 2025</h2>
+        
+        <div class="links">
+            <a href="https://www.linkedin.com/in/samgramada" target="_blank">LinkedIn</a>
+            <a href="resume.pdf" target="_blank">Resume (PDF)</a>
         </div>
     </header>
 
     <main>
-        <!-- About Section -->
         <section class="about">
             <h3>About Me</h3>
-            <p>Write Some stuff about me Later (2-3 sentences probably)
+            <p>Write Some stuff about me Later (2-3 sentences probably)</p>
         </section>
 
-        <!-- Skills Section -->
-        <section class="skills">
-            <h3>Skills</h3>
-            <p><strong>Languages:</strong> Python, C++, HTML/CSS</p>
-            <p><strong>Tools:</strong> SolidWorks, MATLAB, Git</p>
-        </section>
-
-        <!-- Projects Section -->
         <section class="projects">
             <h3>Selected Projects</h3>
 
-            <!-- Project 1 Summary Card -->
-            <article class="project-card">
-                <!-- Replace with a photo of your project -->
-                <img src="project-thumbnail.jpg" alt="Project 1">
+            <a href="project-drone.html" class="project-card">
+                <video src="ROBOTSUMMERGIF.mp4" poster="BUCKY.jpg" class="project-video" muted loop playsinline preload="none"></video>
                 <div class="project-info">
                     <h4>Autonomous Mars Rover</h4>
                     <p>A drone that uses computer vision to navigate indoor spaces without GPS. Built using Python and ROS.</p>
-                    <!-- THIS IS THE LINK TO YOUR NESTED PAGE -->
-                    <a href="project-drone.html" class="read-more">Read Full Case Study &rarr;</a>
                 </div>
-            </article>
-
-            <!-- You can copy and paste the <article> block above to add more projects -->
+            </a>
 
         </section>
     </main>
 
+    <script>
+        const cards = document.querySelectorAll('.project-card');
+
+        cards.forEach(card => {
+            const video = card.querySelector('.project-video');
+            
+            if (video) {
+                // When mouse enters, play the video
+                card.addEventListener('mouseenter', () => {
+                    video.play();
+                });
+
+                // When mouse leaves, completely reset the video to bring the photo back
+                card.addEventListener('mouseleave', () => {
+                    video.load(); 
+                });
+            }
+        });
+    </script>
 </body>
 </html>
