@@ -16,8 +16,10 @@
         </div>
         <div class="nav-links">
             <a href="index.html">Projects</a>
-            <a href="about_me.html">About Me</a>
+            <a href="about.html">About</a>
             <a href="resume.html">Resume</a>
+            <a href="#contact">Contact</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
         </div>
     </nav>
 
@@ -27,15 +29,16 @@
         </div>
 
         <div class="resume-container">
-            <!-- Embeds the PDF directly into the page -->
-            <iframe src="Sam_Gramada_Resume.pdf" class="resume-preview" title="My Resume"></iframe>
+            <!-- Bulletproof Image Preview -->
+            <img src="resume_image.png" alt="Sam Gramada Resume" class="resume-preview">
             
-            <!-- The 'download' attribute forces the browser to save the file rather than open it -->
-            <a href="Sam_Gramada_Resume.pdf" download="Sam_Gramada_Resume.pdf" class="download-btn">Download PDF</a>
+            <!-- Keeps the actual PDF for the download button -->
+            <a href="resume.pdf" download="Sam_Gramada_Resume.pdf" class="download-btn">Download PDF</a>
         </div>
     </main>
 
-    <footer>
+    <!-- Footer (now acts as the Contact section) -->
+    <footer id="contact">
         <p>Please reach out.</p>
         <div class="contact-links">
             <a href="mailto:your.email@example.com">Email</a>
