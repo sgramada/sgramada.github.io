@@ -3,61 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sam Gramada | Engineering Portfolio</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <title>Sam Gramada | My Projects</title>
+    <!-- Thinner font weights loaded -->
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;600&family=Manrope:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="top-header">
-        <h1 class="site-title">Sam Gramada</h1>
-        <h2 class="site-subtitle">Engineering Physics - Mechatronics Focus, UBC<br>Expected Graduation: May 2025</h2>
-        
-        <div class="links">
-            <a href="https://www.linkedin.com/in/samgramada" target="_blank">LinkedIn</a>
-            <a href="resume.pdf" target="_blank">Resume (PDF)</a>
+    <!-- Sticky Top Navigation -->
+    <nav class="sticky-nav">
+        <div class="nav-logo">
+            <a href="index.html">Sam Gramada</a>
         </div>
-    </header>
+        <div class="nav-links">
+            <a href="index.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="#contact">Contact</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        </div>
+    </nav>
 
     <main>
-        <section class="about">
-            <h3>About Me</h3>
-            <p>Write Some stuff about me Later (2-3 sentences probably)</p>
-        </section>
+        <div class="page-header">
+            <h1>My Projects</h1>
+        </div>
 
-        <section class="projects">
-            <h3>Selected Projects</h3>
+        <!-- Project 1 -->
+        <a href="sonar-scanner.html" class="project-card">
+            <div class="project-text">
+                <h2>Phased Array Sonar Scanner</h2>
+                <p>An active 2-axis stabilized gimbal platform for environmental mapping. Features custom PCB power management, ESP32-S3 motion control, and a hybrid 3D-printed/machined aluminum chassis.</p>
+                <span class="view-project-link">View Project &rarr;</span>
+            </div>
+            <div class="project-image-container">
+                <img src="images/sonar-main.jpg" alt="Sonar scanner main build">
+            </div>
+        </a>
 
-            <a href="project-drone.html" class="project-card">
-                <video src="ROBOTSUMMERGIF.mp4" poster="BUCKY.jpg" class="project-video" muted loop playsinline preload="none"></video>
-                <div class="project-info">
-                    <h4>Autonomous Mars Rover</h4>
-                    <p>A drone that uses computer vision to navigate indoor spaces without GPS. Built using Python and ROS.</p>
-                </div>
-            </a>
+        <!-- Project 2 -->
+        <a href="robotSummer.html" class="project-card">
+            <div class="project-text">
+                <h2>Autonomous Mars Rover</h2>
+                <p>Designed the electrical architecture and printed circuit boards, including high-power 30V H-bridge motor drivers and IR sensor breakouts for an unmanned competition vehicle.</p>
+                <span class="view-project-link">View Project &rarr;</span>
+            </div>
+            <div class="project-image-container">
+                <img src="First_Page_Media/BUCKY.jpg" alt="Mars rover driving">
+            </div>
+        </a>
 
-        </section>
+        <!-- Project 3 -->
+        <a href="agrobot.html" class="project-card">
+            <div class="project-text">
+                <h2>Autonomous Agrobot</h2>
+                <p>Electrical and mechanical prototyping for an autonomous farming vehicle designed to operate in outdoor agricultural environments.</p>
+                <span class="view-project-link">View Project &rarr;</span>
+            </div>
+            <div class="project-image-container">
+                <img src="images/agrobot-main.jpg" alt="Agrobot prototype">
+            </div>
+        </a>
     </main>
 
-    <script>
-        const cards = document.querySelectorAll('.project-card');
+    <!-- Footer (now acts as the Contact section) -->
+    <footer id="contact">
+        <p>Please reach out.</p>
+        <div class="contact-links">
+            <a href="mailto:your.email@example.com">Email</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <a href="tel:+1234567890">Phone</a>
+        </div>
+    </footer>
 
-        cards.forEach(card => {
-            const video = card.querySelector('.project-video');
-            
-            if (video) {
-                // When mouse enters, play the video
-                card.addEventListener('mouseenter', () => {
-                    video.play();
-                });
-
-                // When mouse leaves, completely reset the video to bring the photo back
-                card.addEventListener('mouseleave', () => {
-                    video.load(); 
-                });
-            }
-        });
-    </script>
 </body>
 </html>

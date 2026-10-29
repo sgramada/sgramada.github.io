@@ -3,32 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autonomous Robot | Sam Gramada</title>
+    <title>Mars Rover Competition | Sam Gramada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300&family=Manrope:wght@200;300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="project-detail">
-        <a href="index.html" class="back-link">&larr; Back to Home</a>
-        
-        <h1>Autonomous Mars Rover</h1>
-        
-        <p><strong>Role:</strong> Lead Programmer</p>
-        <p><strong>Tools:</strong> Python, ROS, OpenCV, Raspberry Pi</p>
+    <!-- Sticky Top Navigation -->
+    <nav class="sticky-nav">
+        <div class="nav-logo">
+            <a href="index.html">Sam Gramada</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Resume</a>
+        </div>
+    </nav>
 
-        <h3>The Challenge</h3>
-        <p>Write a paragraph here explaining what problem you were trying to solve. Why was it hard?</p>
+    <main class="project-detail-page">
+        <div class="page-header">
+            <a href="index.html" class="back-link">&larr; Back to Projects</a>
+            <h1>Mars Rover Competition</h1>
+        </div>
 
-        <!-- A bigger image for the detail page -->
-        <img src="drone-large.jpg" alt="Drone prototype" class="detail-image">
+        <!-- THIS IS THE NEW SPLIT LAYOUT -->
+        <div class="project-split-layout">
+            
+            <!-- LEFT COLUMN: All the text -->
+            <div class="project-text-column">
+                <h3>Overview</h3>
+                <p>Designed the electrical architecture and printed circuit boards, including high-power 30V H-bridge motor drivers and IR sensor breakouts for an unmanned competition vehicle.</p>
 
-        <h3>The Solution</h3>
-        <p>Explain how you solved it. What engineering decisions did you make? What math or logic did you apply?</p>
+                <h3>Hardware & PCB Design</h3>
+                <p>Details about the KiCad routing, power management, and microcontroller communication go here. This was the core of the electrical lead role.</p>
 
-        <h3>Results</h3>
-        <p>Did it work? What was the final outcome? Mention any metrics (e.g., "reduced latency by 15%").</p>
+                <h3>Results & Metrics</h3>
+                <p>Explain how the rover performed, what the final outcomes were, and any specific technical hurdles overcome during field testing.</p>
+            </div>
 
+            <!-- RIGHT COLUMN: The assortment of images -->
+            <div class="project-media-column">
+                <!-- Make sure your image paths here match your actual folders! -->
+                <img src="First_Page_Media/BUCKY.jpg" alt="Rover main view">
+                <img src="images/rover-testing.jpg" alt="Rover field testing">
+                <img src="images/rover-board.jpg" alt="Rover PCB details">
+            </div>
+
+        </div>
     </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>Please reach out.</p>
+        <div class="contact-links">
+            <a href="mailto:your.email@example.com">Email</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <a href="tel:+1234567890">Phone</a>
+        </div>
+    </footer>
 
 </body>
 </html>
